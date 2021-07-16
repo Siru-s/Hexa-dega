@@ -10,80 +10,279 @@
             background-position: center top;
             background-size: 1980px 350px; 
         }
-    </style>
+    </style>	
 	<p style="text-align: center;">
 		<img src="logo.png" height="35" width="115">
-	</p>
-	<br><br>
+	</p>	
+	<br><br>	
 	<p style="text-align: center;">
 		<img src="logo2.png" height="130" width="371">
-	</p>        
+	</p>  
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+	</style>  
+	<style type="text/css" >
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: 439px;
+			text-align:center;
+			font-family: 'Noto Sans KR', sans-serif;
+			background-color: rgba(86, 64, 64, 1);
+		}
+		li {
+			display:inline;
+		}
+		li a {
+			display: inline-block;
+			color: white;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-size: 20px;
+			padding: 20px 60px;
+			text-decoration: none;
+		}
+		li a:hover:not(.active) {
+			background-color: rgba(29, 18, 16, 1);
+		}
+		.active {
+			background-color: rgba(182, 154, 134, 1);
+		}
+	</style>
+	<style type="text/css">
+		h01 {
+		  font-family: 'Noto Sans KR', sans-serif;
+		  font-size: 50px;
+		  font-weight: bold;
+		  text-align: center;
+		}
+		h02{
+		  font-family: 'Noto Sans KR', sans-serif;
+		  font-size: 35px;
+		  font-weight: medium;
+		  text-align: center;
+		}
+		h04{
+		  font-family: 'Noto Sans KR', sans-serif;
+		  font-size: 20px;
+		  font-weight: 400;
+		  text-align: center;
+		  color: rgba(51, 23, 0, 0.73);
+		}
+		t01 {
+		  font-family: 'Noto Sans KR', sans-serif;
+		  font-size: 30px;
+		  font-weight: bold;
+		  text-align: left;
+		  float: left;
+		  margin-left:30px; margin-bottom:20px;
+		  color: rgba(61, 31, 11, 0.94);
+		}
+		t02{
+		  font-family: 'Noto Sans KR', sans-serif;
+		  font-size: 18px;
+		  font-weight: 400;
+		  text-align: left;
+		  float: left;
+		  margin-left:30px;
+		  color: rgba(61, 31, 11, 0.94);
+		}
+		.p2{clear: both;}
+	</style>
+	<style type="text/css">
+
+		.main input[type=radio] {
+			display: none;
+		}
+		#tab-1:checked ~ .tab label:nth-child(1),
+		#tab-2:checked ~ .tab label:nth-child(2),
+		#tab-3:checked ~ .tab label:nth-child(3){
+			background-color: rgba(0, 0, 0, 0.09);
+			box-shadow: none;
+			color: rgba(0, 0, 0, 0.8);
+		}
+		.content > div {
+			display: none;
+		}
+		#tab-1:checked ~ .content div:nth-child(1),
+		#tab-2:checked ~ .content div:nth-child(2),
+		#tab-3:checked ~ .content div:nth-child(3){
+			display: block;
+		}
+		.main {
+		  margin: 0 auto;
+		  main-width:1380px;
+		  min-width: 450px;
+		  max-width: 50%;
+		}
+		.tab {
+		  overflow: hidden;
+		}
+		.tab label {
+			font-family: 'Noto Sans KR', sans-serif;
+			font-size: 20px;
+			cursor: pointer;
+			float: left;
+			width: 33.333%;
+			text-align: center;
+			padding: 15px 0;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 2px;
+			user-select: none;
+			-webkit-user-select: none;
+			background-color: rgba(0, 0, 0, 0);
+			color: rgba(0, 0, 0, 0.3);
+		}
+		.content {
+		  background-color: rgba(0, 0, 0, 0.09);
+		  min-height: 400px;
+		  max-height: 400px;
+		}
+		.content > div{
+		   padding: 30px;
+		   line-height: 1.5;
+		   font-size: 17px;
+		}
+	</style>	
+	<script>
+		var dday = new Date("November 21, 2021, 2:00:00").getTime();
+
+		setInterval(function() {
+		  var today = new Date().getTime();
+		  var gap = dday - today;
+		  var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+		  var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+		  var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+
+		  document.getElementById("D1").innerHTML = day + "일";
+		  document.getElementById("count1").innerHTML = hour + "시간 " + min + "분 " + sec + "초";
+		}, 1000);
+		
+		var dday1 = new Date("August 24, 2021, 2:00:00").getTime();
+
+		setInterval(function() {
+		  var today1 = new Date().getTime();
+		  var gap1 = dday1 - today1;
+		  var day1 = Math.ceil(gap1 / (1000 * 60 * 60 * 24));
+		  var hour1 = Math.ceil((gap1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var min1 = Math.ceil((gap1 % (1000 * 60 * 60)) / (1000 * 60));
+		  var sec1 = Math.ceil((gap1 % (1000 * 60)) / 1000);
+
+		  document.getElementById("D2").innerHTML = day1 + "일";
+		  document.getElementById("count2").innerHTML = hour1 + "시간 " + min1 + "분 " + sec1 + "초";
+		}, 1000);		
+	</script>
 </head>
 
 <body>  
 	<center>
-		<br>
+		<br><br>
+		<!--
 		<p style="text-align: center;">
-			<img src="./b1.png" height="60" width="240">
+			<img src="b1.png" height="60" width="240">
 		</p>
 		<br>
-		<h1>확장팩 안내</h1>
-		<br>
-		<h2>확장팩 순서</h2>
-		<br>
-		포세이큰 -> 섀도우 킵 -> 빛의저편
-		<br>
-		현재 진행 중인 확장팩은 빛의 저편입니다.
+		-->
+		
+		<ul>
+		  <li><a class="active" href="#home">확장팩 소개</a></li>
+		  <li><a href="#link">세계관 연구</a></li>
+		</ul>
+		
 		<br><br>
-		DLC 확장팩 소개
-		<br>
-		포세이큰<br>
-		- 전용 스토리 미션<br>
-		- 다양한 추가 장비 이용가능<br>
-		- 추가 플레이어 능력 개방<br>
-		- 조각난 왕관 던전<br>
-		- 마지막 소원 레이드 <br>
-		<br>
-		공식 사이트에서 자세히 보기 
-		<br>
-		섀도우킵<br>
-		- 전용 스토리 미션<br>
-		- 다양한 추가 장비 이용가능<br>
-		- 추가 플레이어 능력 개방<br>
-		- 이단의 구덩이 던전<br>
-		- 구원의 정원 레이드<br>
-		<br>
-		공식 사이트에서 자세히 보기 
-		<br>
-		빛의 저편<br>
-		- 전용 스토리 미션<br>
-		- 새로운 시공 능력 개방<br>
-		- 새로운 행성 유로파 관련 콘텐츠<br>
-		- 다양한 추가 장비 이용가능<br>
-		- 딥스톤 무덤 레이드<br>
-		<br>
-		공식 사이트에서 자세히 보기 
-		<br>
-		확장팩 기간 확인 방법
-		<br>
-		데스티니 가디언즈를 설치한 플레이어를 기준으로한 설명입니다.
-		<br>
-		1. Steam 상점 페이지에서 데스티니 가디언즈를 검색합니다.
-		<br>
-		2. 현재 진행중인 최신 확장팩을 선택해 출시 날자를 확인합니다.<br>
-		(확장팩 제품은  '데스티니 가디언즈:확정팩명' 으로 되어 있습니다.)
-		<br>
-		3. 출시 날자와 현재 날자를 차이를 비교합니다. 
-		<br>
-		4. 그 차이가 12개월에 가까운 지 체크합니다. 
-		<br>
-		5. 2개월에서 남은 날자만큼 확장팩이 남았다고 보면 편합니다.
-		<br><br>
-		시즌 기간 확인법
-		<br>
-		1. 게임 내에서 tab 키를 눌러서 메뉴를 엽니다.<br>
-		2. 시즌 페이지로 이동해 남은 날자를 확인합니다.<br>
-		<br>
+		<h01>확장팩 순서</h01><br>
+		<h04>확장팩의 출시 순서입니다</h04><br><br><br>
+		<img src="line.png" height="300" width="800"><br><br>
+		<h02>포세이큰 → 섀도우킵 → 빛의 저편</h02>
+		<br><br>	
+		<h04>현재 진행 중인 확장팩은 빛의 저편입니다.</h04>
+		<br><br><br><br>
+		
+		<h01>확장팩 안내</h01><br>
+		<h04>확장팩의 보상 내역들입니다</h04>
+		<br><br><br>
+		
+		<div class="main">
+		  <input type="radio" id="tab-1" name="show" checked/>
+		  <input type="radio" id="tab-2" name="show" />
+		  <input type="radio" id="tab-3" name="show" />
+		  <div class="tab">
+			<label for="tab-1">포세이큰</label>
+			<label for="tab-2">섀도우킵</label>
+			<label for="tab-3">빛의 저편</label>
+		  </div>
+		  <div class="content">
+			<div class="content-dis">
+				<br>
+				<img src="forsaken.png" height="300" width="250" style="margin-left:100px; float:left;"> 
+					<t01>데스티니 가디언즈: 포세이큰</t01><br>
+					<t02>
+					- 전용 스토리 미션<br>
+					- 다양한 추가 장비 이용가능<br>
+					- 추가 플레이어 능력 개방<br>
+					- 조각난 왕관 던전<br>
+					- 마지막 소원 레이드 <br>
+					</t02>
+					<div style="background-color: rgba(86, 64, 64, 1); width:360px; margin:25px; float:left;">
+						<li><a target='_blank' href="https://www.bungie.net/7/ko/Destiny/Forsaken">공식 사이트에서 자세히 보기</a></li>
+					</div>
+					<div style="clear: both;"></div>
+				<br>
+			</div>
+			<div class="content-dis">
+				<br>
+				<img src="shadowkeep.png" height="300" width="250" style="margin-left:100px; float:left;"> 
+					<div>
+					<t01>데스티니 가디언즈: 섀도우킵</t01><br>
+					<t02>
+					- 전용 스토리 미션<br>
+					- 다양한 추가 장비 이용가능<br>
+					- 추가 플레이어 능력 개방<br>
+					- 이단의 구덩이 던전<br>
+					- 구원의 정원 레이드<br>
+					</t02>
+					<div style="background-color: rgba(86, 64, 64, 1); width:360px; margin:25px; float:left;">
+						<li><a target='_blank' href="https://www.bungie.net/7/ko/Destiny/Shadowkeep">공식 사이트에서 자세히 보기</a></li>
+					</div>
+					<div style="clear: both;"></div>
+					</div>
+				<br>	
+			</div>
+			<div class="content-dis">
+				<br>
+				<img src="BeyondLight.png" height="300" width="250" style="margin-left:100px; float:left;"> 
+					<t01>데스티니 가디언즈: 빛의 저편</t01><br>
+					<t02>
+					- 전용 스토리 미션<br>
+					- 새로운 시공 능력 개방<br>
+					- 새로운 행성 유로파 관련 콘텐츠<br>
+					- 다양한 추가 장비 이용가능<br>
+					- 딥스톤 무덤 레이드<br>
+					</t02>
+					<div style="background-color: rgba(86, 64, 64, 1); width:360px; margin:25px; float:left;">
+						<li><a target='_blank' href="https://www.bungie.net/7/ko/Destiny/BeyondLight">공식 사이트에서 자세히 보기</a></li>
+					</div>
+					<div style="clear: both;"></div>
+				<br>
+			</div>
+			<div>
+			</div>
+		</div>
+		
+		<br><br><br>
+		<h01>확장팩 남은 기간</h01><br><br>
+		<div style="font-family: 'Noto Sans KR', sans-serif; font-size: 50px" id="D1"></div>
+		<div style="font-family: 'Noto Sans KR', sans-serif;" id="count1"></div><br><br>
+		<h04>* 게임 회사의 일정에 따라 변동 사항이 있을 수도 있습니다.</h04><br><br>
+		
+		<h01>시즌패스 남은 기간</h01><br><br>
+		<div style="font-family: 'Noto Sans KR', sans-serif; font-size: 50px" id="D2"></div>
+		<div style="font-family: 'Noto Sans KR', sans-serif;" id="count2"></div><br><br>
+		<h04>* 게임 회사의 일정에 따라 변동 사항이 있을 수도 있습니다.</h04><br><br>
+	
 	</center>
 </body>
 </html>
