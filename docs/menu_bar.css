@@ -1,0 +1,26 @@
+ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 439px;
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color: rgba(86, 64, 64, 1);
+}
+li {
+	display:inline;
+}
+li a {
+	display: inline-block;
+	color: white;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 20px;
+	padding: 20px 60px;
+	margin: 0 auto;
+	text-decoration: none;
+}
+li a:hover:not(.active) {
+	background-color: rgba(29, 18, 16, 1);
+}
+.active {
+	background-color: rgba(182, 154, 134, 1);
+}

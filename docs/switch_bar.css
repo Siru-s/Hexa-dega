@@ -1,0 +1,53 @@
+.main input[type=radio] {
+	display: none;
+}
+#tab-1:checked ~ .tab label:nth-child(1),
+#tab-2:checked ~ .tab label:nth-child(2),
+#tab-3:checked ~ .tab label:nth-child(3){
+	background-color: rgba(0, 0, 0, 0.09);
+	box-shadow: none;
+	color: rgba(0, 0, 0, 0.8);
+}
+.content > div {
+	display: none;
+}
+#tab-1:checked ~ .content div:nth-child(1),
+#tab-2:checked ~ .content div:nth-child(2),
+#tab-3:checked ~ .content div:nth-child(3){
+	display: block;
+}
+.main {
+  margin: 0 auto;
+  main-width:1380px;
+  min-width: 1000px;
+  max-width: 1000px;
+}
+.tab {
+  overflow: hidden;
+}
+.tab label {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+	float: left;
+	width: 33.333%;
+	text-align: center;
+	padding: 15px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	user-select: none;
+	-webkit-user-select: none;
+	background-color: rgba(0, 0, 0, 0);
+	color: rgba(0, 0, 0, 0.3);
+}
+.content {
+  background-color: rgba(0, 0, 0, 0.09);
+  min-height: 400px;
+  max-height: 400px;
+}
+.content > div{
+   padding: 30px;
+   line-height: 1.5;
+   font-size: 17px;
+}
