@@ -1,4 +1,4 @@
-var dday = new Date("February 24, 2022, 2:00:00").getTime();
+var dday = new Date("February 23, 2022, 2:00:00").getTime();
 
 setInterval(function() {
   var today = new Date().getTime();
@@ -12,7 +12,7 @@ setInterval(function() {
   document.getElementById("count1").innerHTML = hour + "시간 " + min + "분 " + sec + "초";
 }, 1000);
 
-var dday1 = new Date("February 24, 2022, 2:00:00").getTime();
+var dday1 = new Date("February 23, 2022, 2:00:00").getTime();
 
 setInterval(function() {
   var today1 = new Date().getTime();
